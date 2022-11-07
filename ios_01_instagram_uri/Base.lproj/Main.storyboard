@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="52y-q4-khJ">
+                            <stackView opaque="NO" contentMode="top" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52y-q4-khJ">
                                 <rect key="frame" x="0.0" y="47" width="393" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06L-ei-6ah">
@@ -107,14 +107,73 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eHr-E3-7Ai"/>
                                 </constraints>
                             </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfD-ol-GtB">
+                                <rect key="frame" x="0.0" y="165" width="393" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-Yl-2Vt">
+                                        <rect key="frame" x="0.0" y="9" width="2190" height="110"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox" translatesAutoresizingMaskIntoConstraints="NO" id="ncX-bX-vMV">
+                                                <rect key="frame" x="0.0" y="0.0" width="730" height="110"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox" translatesAutoresizingMaskIntoConstraints="NO" id="LBr-LO-F2z">
+                                                <rect key="frame" x="730" y="0.0" width="730" height="110"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-ZY-V8B">
+                                                <rect key="frame" x="1460" y="0.0" width="730" height="110"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zCZ-Yl-2Vt" firstAttribute="bottom" secondItem="eqv-oY-u5W" secondAttribute="bottom" id="dCw-Fe-2yq"/>
+                                    <constraint firstItem="zCZ-Yl-2Vt" firstAttribute="trailing" secondItem="eqv-oY-u5W" secondAttribute="trailing" id="oSE-Gs-Kt8"/>
+                                    <constraint firstItem="zCZ-Yl-2Vt" firstAttribute="height" secondItem="1Y7-u0-fcj" secondAttribute="height" multiplier="0.859375" id="qRG-yu-x6d"/>
+                                    <constraint firstItem="zCZ-Yl-2Vt" firstAttribute="leading" secondItem="eqv-oY-u5W" secondAttribute="leading" id="uPL-bb-Xgb"/>
+                                    <constraint firstItem="zCZ-Yl-2Vt" firstAttribute="top" secondItem="eqv-oY-u5W" secondAttribute="top" constant="9" id="zGC-LQ-WOd"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eqv-oY-u5W"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1Y7-u0-fcj"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-Cq-1U9">
+                                <rect key="frame" x="0.0" y="292" width="393" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ppG-1P-cXf">
+                                        <rect key="frame" x="78" y="8" width="236" height="311.33333333333326"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="113" translatesAutoresizingMaskIntoConstraints="NO" id="3nZ-vu-L37">
+                                                <rect key="frame" x="0.0" y="0.0" width="236" height="20.333333333333332"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeM-4p-Jju">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="square.and.arrow.up.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NPC-Qr-euy">
+                                                        <rect key="frame" x="216.33333333333334" y="0.99999999999999822" width="19.666666666666657" height="19"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bruce" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-L1-zpB">
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="236" height="291"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ppG-1P-cXf" firstAttribute="top" secondItem="e0r-I6-jAf" secondAttribute="top" constant="130" id="MoZ-vt-Uaf"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="e0r-I6-jAf"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Lp0-rp-XjE"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k8m-lE-kav"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="k8m-lE-kav" firstAttribute="top" secondItem="52y-q4-khJ" secondAttribute="top" constant="12" id="096-Y3-pY3"/>
-                            <constraint firstItem="52y-q4-khJ" firstAttribute="trailing" secondItem="k8m-lE-kav" secondAttribute="trailing" id="1BU-LK-da4"/>
-                            <constraint firstItem="52y-q4-khJ" firstAttribute="leading" secondItem="k8m-lE-kav" secondAttribute="leading" id="YkH-ns-hb4"/>
-                            <constraint firstItem="52y-q4-khJ" firstAttribute="top" secondItem="Nhj-99-pkI" secondAttribute="top" constant="47" id="uN4-mS-x6d"/>
+                            <constraint firstItem="k8m-lE-kav" firstAttribute="top" secondItem="52y-q4-khJ" secondAttribute="top" constant="12" id="3gA-GR-vkX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="homekit" catalog="system" id="hp0-07-Zc1"/>
@@ -163,10 +222,13 @@
     </scenes>
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="bruce" width="236" height="291"/>
         <image name="button.programmable" catalog="system" width="128" height="123"/>
+        <image name="fox" width="730" height="730"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="123"/>
         <image name="text.bubble" catalog="system" width="128" height="110"/>
         <image name="video" catalog="system" width="128" height="82"/>
         <systemColor name="systemBackgroundColor">
