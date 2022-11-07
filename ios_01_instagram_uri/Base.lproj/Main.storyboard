@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,14 +64,64 @@
                     <view key="view" contentMode="scaleToFill" id="Nhj-99-pkI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="52y-q4-khJ">
+                                <rect key="frame" x="0.0" y="47" width="393" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06L-ei-6ah">
+                                        <rect key="frame" x="0.0" y="0.0" width="243" height="110"/>
+                                        <menu key="menu" id="aK4-sh-mCJ">
+                                            <children>
+                                                <command title="Siguiendo" id="ddk-dx-Z1W"/>
+                                                <command title="Favoritos" id="CP6-Pu-2YV"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Instagram"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-Pq-3X5">
+                                        <rect key="frame" x="243" y="0.0" width="50" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="zdZ-5I-nHZ"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=" "/>
+                                    </button>
+                                    <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-5L-5Mj">
+                                        <rect key="frame" x="293" y="0.0" width="50" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="FJl-PN-Z4Y"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="text.bubble" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="right" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgm-iW-m3O">
+                                        <rect key="frame" x="343" y="0.0" width="50" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Xxg-HO-wzJ"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="1Uv-RQ-e6B"/>
+                                    <constraint firstAttribute="width" secondItem="52y-q4-khJ" secondAttribute="height" multiplier="393:110" id="Tvz-Bw-y2E"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eHr-E3-7Ai"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="k8m-lE-kav"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k8m-lE-kav" firstAttribute="top" secondItem="52y-q4-khJ" secondAttribute="top" constant="12" id="096-Y3-pY3"/>
+                            <constraint firstItem="52y-q4-khJ" firstAttribute="trailing" secondItem="k8m-lE-kav" secondAttribute="trailing" id="1BU-LK-da4"/>
+                            <constraint firstItem="52y-q4-khJ" firstAttribute="leading" secondItem="k8m-lE-kav" secondAttribute="leading" id="YkH-ns-hb4"/>
+                            <constraint firstItem="52y-q4-khJ" firstAttribute="top" secondItem="Nhj-99-pkI" secondAttribute="top" constant="47" id="uN4-mS-x6d"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="homekit" catalog="system" id="hp0-07-Zc1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5th-Xo-8Ob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-607" y="-439"/>
+            <point key="canvasLocation" x="-608.39694656488552" y="-439.43661971830988"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3qu-1q-gSy">
@@ -113,8 +164,10 @@
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="button.programmable" catalog="system" width="128" height="123"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="text.bubble" catalog="system" width="128" height="110"/>
         <image name="video" catalog="system" width="128" height="82"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
